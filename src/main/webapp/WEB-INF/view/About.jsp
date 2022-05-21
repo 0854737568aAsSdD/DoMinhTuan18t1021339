@@ -209,54 +209,6 @@ footer img {
 						<button class="btn btn-light " type="submit">Go</button>
 					</div>
 				</div>
-				<ul class="listSP " id="myList">
-					<li id="litest"><img
-						src="hinh/samsung-galaxy-s20-plus-400x460-fix-400x460.png"><a
-						href="Html/html20.html">Samsung Galaxy S20+</a></li>
-					<li><img src="hinh/iphone-11.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 64GB</a></li>
-					<li><img src="hinh/xiaomi-redmi-note-9s.jpg"><a
-						href="Html/htmlredmi9s.html">Xiaomi Redmi Note 9S </a></li>
-					<li><img src="hinh/oppo-a52-spec-720x333.jpg"><a
-						href="Html/htmlA52.html">OPPO A52</a></li>
-					<li><img src="hinh/nokia-53-den-600x600-400x400.jpg"><a
-						href="Html/htmlnokia5.3.html">Nokia 5.3</a></li>
-					<li><img src="hinh/realme-6i-trang-600-200x200.jpg"><a
-						href="Html/htmlredmi6i.html">Realme 6i</a></li>
-					<li><img src="hinh/samsung-galaxy-fold-black-400x400.jpg"><a
-						href="Html/htmlgalaxyford.html">Samsung Galaxy Fold</a></li>
-					<li><img src="hinh/iphone-11-pro-max-512gb-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone 11 Pro Max 512GB</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-z-flip-den-600x600-400x400.jpg"><a
-						href="Html/htmlgalaxyz.html">Samsung Galaxy Z Flip</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro 256GB</a></li>
-					<li><img src="hinh/iphone-11-pro-max-green-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 64GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone Xs Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-s20-ultra-600x600-1-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy S20 Ultra</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy Note 10+</a></li>
-					<li><img src="hinh/iphone-xs-max-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone Xs Max 64GB</a></li>
-					<li><img src="hinh/iphone-11-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 256GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/html20.html">iPhone Xs 256GB</a></li>
-					<li><img src="hinh/huawei-p40-pro-600x600-3-400x400.jpg"><a
-						href="Html/html20.html">Huawei P40 Pro</a></li>
-					<li><img src="hinh/oppo-find-x2-blue-600x600-400x400.jpg"><a
-						href="Html/html20.html">OPPO Find X2</a></li>
-					<li><img src="hinh/blackberry-key2-4-400x400.jpg"><a
-						href="Html/html20.html">BlackBerry KEY2 </a></li>
-				</ul>
 			</form>
 
 		</nav>
@@ -264,15 +216,11 @@ footer img {
 			<ul class="nav ">
 				<li class="nav-item"><a class="nav-link" href="Home">TRANG
 						CHỦ</a></li>
-				<li class="nav-item"><a class="nav-link" href="Home">GIỚI
+				<li class="nav-item"><a class="nav-link" href="About">GIỚI
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a></li>
-				<li><a href="Html/Home.html"><img
-						style="height: 80px; border-radius: 50px; margin: 0 50px;"
-						src="hinh/python.jpg"></a></li>
-
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
 				<li class="nav-item"><a class="nav-link" href="tinnhan">TIN

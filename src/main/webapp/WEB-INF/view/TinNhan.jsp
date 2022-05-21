@@ -21,8 +21,6 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <style>
 body {
-	background-image: linear-gradient(rgba(58, 57, 57, 0.45),
-		rgba(58, 57, 57, 0.45)), url("hinh/RE4wB6h.jpg");
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -118,9 +116,11 @@ section {
 }
 
 #footer {
-	height: 80px;
-	padding-left: 12%;
-	opacity: 0.9;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Height of the footer */
+	background: #6cf;
 }
 
 footer img {
@@ -170,68 +170,16 @@ footer img {
 					</ul>
 >
 				</c:if>
-
+				<c:if test="${not empty Login }">
+					<script type="text/javascript">
+						$(window).on('load', function() {
+							$('#myModal456').modal('show');
+						});
+					</script>
+				</c:if>
 
 
 			</ul>
-			<form style="padding-left: 10%; position: relative;">
-				<div class="input-group mb-3" id="formtk">
-					<input id="myInput" class="form-control" type="text"
-						placeholder="Tìm kiếm sản phẩm..">
-					<div class="input-group-append">
-						<button class="btn btn-light " type="submit">Go</button>
-					</div>
-				</div>
-				<ul class="listSP " id="myList">
-					<li id="litest"><img
-						src="hinh/samsung-galaxy-s20-plus-400x460-fix-400x460.png"><a
-						href="Html/html20.html">Samsung Galaxy S20+</a></li>
-					<li><img src="hinh/iphone-11.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 64GB</a></li>
-					<li><img src="hinh/xiaomi-redmi-note-9s.jpg"><a
-						href="Html/htmlredmi9s.html">Xiaomi Redmi Note 9S </a></li>
-					<li><img src="hinh/oppo-a52-spec-720x333.jpg"><a
-						href="Html/htmlA52.html">OPPO A52</a></li>
-					<li><img src="hinh/nokia-53-den-600x600-400x400.jpg"><a
-						href="Html/htmlnokia5.3.html">Nokia 5.3</a></li>
-					<li><img src="hinh/realme-6i-trang-600-200x200.jpg"><a
-						href="Html/htmlredmi6i.html">Realme 6i</a></li>
-					<li><img src="hinh/samsung-galaxy-fold-black-400x400.jpg"><a
-						href="Html/htmlgalaxyford.html">Samsung Galaxy Fold</a></li>
-					<li><img src="hinh/iphone-11-pro-max-512gb-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone 11 Pro Max 512GB</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-z-flip-den-600x600-400x400.jpg"><a
-						href="Html/htmlgalaxyz.html">Samsung Galaxy Z Flip</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro 256GB</a></li>
-					<li><img src="hinh/iphone-11-pro-max-green-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 64GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone Xs Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-s20-ultra-600x600-1-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy S20 Ultra</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy Note 10+</a></li>
-					<li><img src="hinh/iphone-xs-max-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone Xs Max 64GB</a></li>
-					<li><img src="hinh/iphone-11-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 256GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/html20.html">iPhone Xs 256GB</a></li>
-					<li><img src="hinh/huawei-p40-pro-600x600-3-400x400.jpg"><a
-						href="Html/html20.html">Huawei P40 Pro</a></li>
-					<li><img src="hinh/oppo-find-x2-blue-600x600-400x400.jpg"><a
-						href="Html/html20.html">OPPO Find X2</a></li>
-					<li><img src="hinh/blackberry-key2-4-400x400.jpg"><a
-						href="Html/html20.html">BlackBerry KEY2 </a></li>
-				</ul>
-			</form>
-
 		</nav>
 		<nav class="navbar bg-dark justify-content-center" id="nav2">
 			<ul class="nav ">
@@ -241,10 +189,8 @@ footer img {
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a></li>
-				<li><a href="Html/Home.html"><img
-						style="height: 80px; border-radius: 50px; margin: 0 50px;"
-						src="hinh/python.jpg"></a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+						HÀNG</a></li>
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">NHƯỢNG
@@ -254,44 +200,79 @@ footer img {
 				<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 			</ul>
 		</nav>
-							<div class="card-body">
-						<div class="table-responsive">
-							<table class="table table-bordered" id="dataTable" width="100%"
-								cellspacing="0">
-								<thead>
-									<tr>
-									    <th>Họ Tên</th>
-										<th>Nội Dung Phản Hồi</th>
-										<th>Nội Dung</th>
-									</tr>
-								</thead>
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%"
+					cellspacing="0">
+					<thead>
+						<tr>
+							<th>Họ Tên</th>
+							<th>Nội Dung Phản Hồi</th>
+							<th>Nội Dung Được Trả Lời</th>
+						</tr>
+					</thead>
 
-								<tbody>
-									<c:forEach items="${phanhoi}" var="t">
-										<tr>
-				<td style="color: yellow;">${t.getHoten() }</td>
-				<td style="color: yellow;">${t.getNoidung()}</td>
-											<td>
-<c:choose>
-						<c:when test="${t. getXacnhan() == 0}">
-							<p>Chưa trả lời</p>
-						</c:when>
-						<c:when test="${t.getXacnhan() == 1 }">
-							<p>${t.getPhanhoi() }</p>
-						</c:when>
-						<c:otherwise>
-							<p></p>
-						</c:otherwise>
-					</c:choose>				
-										    </td>							
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
+					<tbody>
+						<c:forEach items="${phanhoi}" var="t">
+							<tr>
+								<td style="color: #2E0249">${t.getHoten() }</td>
+								<td style="color: #EB5353;">${t.getNoidung()}</td>
+								<td>
+								<c:choose>
+										<c:when test="${t. getXacnhan() == 0}">
+											<p style="color: #A85CF9">Chưa trả lời</p>
+										</c:when>
+										<c:when test="${t.getXacnhan() == 1 }">
+											<p style="color: #A85CF9">${t.getPhanhoi() }</p>
+										</c:when>
+										<c:otherwise>
+											<p></p>
+										</c:otherwise>
+									</c:choose>
+									</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal456" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
 					</div>
-		
-		
+					<div class="modal-body">
+						<h3 class="text-center">Bạn cần đăng nhập để tiến hành chức
+							năng này</h3>
+						<a href="Login">Đăng nhập ngay </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="navbar navbar-expand-sm bg-dark" id="footer">
+			<div class="col-md-1 ">
+				<a> <img src="hinh/python.jpg">
+				</a>
+			</div>
+			<div class="col-md-2">
+				<a href="#">Chính sách bảo hành</a> <br> <a href="#">Chính
+					sách đổi trả</a>
+			</div>
+			<div class="col-md-2">
+				<a href="#">Hướng dẫn mua online</a> <br> <a href="#">Nội
+					quy cửa hàng</a>
+			</div>
+			<div class="col-md-2">
+				<a href="#">Phương thức thanh toán</a> <br>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3" id="imgf">
+				<a href=""><img src="hinh/fb.png"> </a> <a href=""><img
+					src="hinh/tw.png"> </a> <a href=""><img src="hinh/y.png">
+				</a>
+			</div>
+		</footer>
 </body>
 
 </html>

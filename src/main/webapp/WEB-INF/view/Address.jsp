@@ -20,6 +20,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jsproducts.js"></script>
+<script src="js/Validator.js"></script>
 <link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,12 +36,22 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="#">Home</a>
-
-		<!-- Links -->
-		<ul class="navbar-nav">
+	<nav class="navbar bg-dark justify-content-center" id="nav2">
+		<ul class="nav " id="reponsive">
+			<li class="nav-item"><a class="nav-link" href="Home">TRANG
+					CHỦ</a></li>
+			<li class="nav-item"><a class="nav-link" href="About">GIỚI
+					THIỆU</a></li>
+			<li class="nav-item"><a class="nav-link" href="phone">SẢN
+					PHẨM</a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+			<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
+					HỒI</a></li>
+			<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
+					NHẮN </a></li>
+			<li class="nav-item"><a class="nav-link" href="LichSuController">LỊCH
+					SỬ MUA</a></li>
+			<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 		</ul>
 	</nav>
 	<br>
@@ -59,7 +70,6 @@
 					class="form-control" placeholder="Nhập số điện thoại"
 					name="sodienthoai" id="sodienthoai"> <span
 					class="form-message" style="color: red"></span>
-
 			</div>
 			<div class="form-group">
 				<label for="pwd">Địa chỉ giao hàng:</label> <input type="text"
@@ -70,7 +80,7 @@
 			<div class="form-group">
 				<label for="pwd">Nhập gmail người nhận hàng:</label> <input
 					type="text" class="form-control" id="email"
-					placeholder="Nhập email người nhận hàng" name="gmail"> <span
+					placeholder="Nhập email người nhận hàng" name="email"> <span
 					class="form-message" style="color: red"></span>
 
 			</div>
@@ -114,11 +124,14 @@
 			</a>
 		</div>
 	</footer>
-	<script>
+	<!--
+		<script>
 		
 	<%@include file="../../js/Validator.js"%>
 		
 	</script>
+	  -->
+
 	<script type="text/javascript">
 		Validator({
 			form : '#form-new',
@@ -128,8 +141,8 @@
 					Validator.isRequired('#diachi'),
 					Validator.isRequired('#email'),
 					Validator.isEmail('#email'),
-					Validator.isSoDienThoaiTuan('#sodienthoai'),
-					Validator.isTenTuan('#hovaten')],
+					Validator.isSoDienThoaiTuan('#sodienthoai')
+					],
 		//Validator.isLogic('#ngayXuatPhat') 
 		//		onSubmit : function(data) {
 		//		console.log(data);

@@ -18,7 +18,7 @@ public class SuaSachController {
 	@Autowired
 	LoaiBo lbo;
 
-	@RequestMapping("/TauVuTru")
+	@RequestMapping("/AdminUpdate")
 	public String voidsua(HttpServletRequest request, HttpServletResponse response) {
 		try {
 			request.setCharacterEncoding("utf-8");

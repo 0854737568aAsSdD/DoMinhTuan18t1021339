@@ -71,7 +71,6 @@ public class DienThoaiDao {
 		String sql = "Select * from DienThoai where tendienthoai like '%" + txtTimKiem + "%' ";
 		System.out.println(sql);
 		return jdbcTemplate123.query(sql, new Object[] {}, new RowMapper<DienThoaiBean>() {
-
 			@Override
 			public DienThoaiBean mapRow(ResultSet rs, int rowNum) throws SQLException {
 				DienThoaiBean dth = new DienThoaiBean();

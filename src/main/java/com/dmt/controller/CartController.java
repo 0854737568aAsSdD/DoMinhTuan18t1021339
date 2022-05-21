@@ -13,7 +13,7 @@ import com.dmt.bo.CartBo;
 
 @Controller
 public class CartController {
-	@RequestMapping("/add")
+	@RequestMapping("/cart")
 	public String themhang(HttpServletRequest request, HttpSession session) {
 		CartBo bo = new CartBo();
 		String makh = request.getParameter("makh");

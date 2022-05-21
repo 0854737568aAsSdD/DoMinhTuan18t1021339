@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact V4</title>
+<title>Update Product</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -55,7 +55,7 @@
 					data-validate="Name is required">
 					<span class="label-input100">Mã Điện Thoại</span> <input
 						id="txtmasach" name="txtmadienthoai" placeholder="Mã Điện Thoại"
-						class="input100" required="" type="text" value="${madienthoai}">
+						class="input100" required="" type="text" value="${madienthoai} ">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -151,7 +151,9 @@
 					<span class="label-input100">Ảnh</span><img alt=""
 						src="<c:out value="${anh}"></c:out>" style="width: 75px"> <input
 						id="txtfile" name="txtfile" placeholder="Ảnh" class="input100"
-						required="" type="file"> <span class="focus-input100"></span>
+						required="" type="file" onchange="previewFile(this)"> <span
+						class="focus-input100"></span>
+					<div id="preview"></div>
 				</div>
 
 				<div class="container-contact100-form-btn">
@@ -167,11 +169,24 @@
 			</form>
 		</div>
 	</div>
-
-
-
 	<div id="dropDownSelect1"></div>
-
+	<script type="text/javascript">
+	function previewFile(input) {
+		const [file] = input.files
+		const preview = document.getElementById('preview')
+		const reader = new FileReader()
+		reader.onload = e => {
+			const img = document.createElement('img')
+			img.src = e.target.result
+			img.width = 200
+			img.height = 200 
+			img.alt ='file'
+			preview.appendChild(img)
+		}
+		reader.readAsDataURL(file)
+		
+	}
+	</script>
 
 </body>
 </html>

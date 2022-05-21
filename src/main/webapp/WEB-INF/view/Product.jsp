@@ -187,27 +187,22 @@
 		</nav>
 		<div>
 			<nav class="navbar bg-dark justify-content-center" id="nav2">
-				<ul class="nav " id="reponsive">
-					<li class="nav-item"><a class="nav-link" href="About">TRANG
+				<ul class="nav ">
+					<li class="nav-item"><a class="nav-link" href="Home">TRANG
 							CHỦ</a></li>
-					<li class="nav-item"><a class="nav-link" href="Home">GIỚI
+					<li class="nav-item"><a class="nav-link" href="About">GIỚI
 							THIỆU</a></li>
 					<li class="nav-item"><a class="nav-link" href="phone">SẢN
 							PHẨM</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a>
-					</li>
-					<li class="nav-item" id="logo"><a class="nav-link"
-						href="Html/Home.html"><img
-							style="height: 80px; border-radius: 50px; margin: 0 10px;"
-							src="hinh/python.jpg"></a></li>
-					<li class="nav-item"><a class="nav-link" href="#">DỊCH VỤ</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#">NHƯỢNG
-							QUYỀN </a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
+							HỒI</a></li>
+					<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
+							NHẮN </a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="LichSuController">THANH TOÁN</a></li>
-					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a>
-					</li>
+						href="LichSuController">LỊCH SỬ MUA</a></li>
+					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 				</ul>
 			</nav>
 			<section>
@@ -242,8 +237,8 @@
 									width="180" height="180" src="${c.anh}">
 									<h3>${c.tendienthoai}</h3>
 									<div class="price">
-										<strong value>${c.gia} ₫</strong> <a
-											href="add?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}$&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
+										<strong value>${c.gia} ₫</strong> <a style="color: blueviolet"
+											href="cart?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}$&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
 											mua</a>
 									</div>
 									<div class="promo noimage">
@@ -270,9 +265,7 @@
 									Tư vấn sản phẩm </a> <br /> <a onclick="submitChoice(this)"
 									style="background: white-space:; color: black;" class="choice"
 									data-choice="Yêu cầu hỗ trợ kĩ thuật của bạn sẽ được tới với nhân viên trực tuyến">
-									Hỗ trợ kĩ thuật </a> <br /> <a href=""
-									style="background: white-space:; color: black;" class="choice">
-									Chat với nhân viên </a> <br />
+									Hỗ trợ kĩ thuật </a> <br />
 
 							</div>
 						</div>
@@ -293,9 +286,7 @@
                 Tư vấn sản phẩm </a> <br /> <a onclick="submitChoice(this)"\
                 style="background: white-space:; color: black;" class="choice"\
                 data-choice="Yêu cầu hỗ trợ kĩ thuật của bạn sẽ được tới với nhân viên trực tuyến"> Hỗ trợ kĩ\
-                thuật </a> <br /> <a href=""\
-                style="background: white-space:; color: black;" class="choice">\
-                Chat với nhân viên </a> <br />';
+                thuật </a> <br />';
 							$('#conversation').append(element);
 
 						}
@@ -315,8 +306,7 @@
 						quy cửa hàng</a>
 				</div>
 				<div class="col-md-2">
-					<a href="#">Phương thức thanh toán</a> <br> <a href="#">Phương
-						thức vận chuyển</a>
+					<a href="#">Phương thức thanh toán</a> <br>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-3" id="imgf">

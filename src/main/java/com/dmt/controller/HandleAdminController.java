@@ -25,7 +25,7 @@ public class HandleAdminController {
 	@Autowired
 	LoaiBo lbo;
 
-	@RequestMapping("/TramTrungChuyen")
+	@RequestMapping("/AdminAdd")
 	public String themSach(HttpServletRequest request) {
 		List<LoaiBean> lbean = lbo.getAllusers();
 		request.setAttribute("loai", lbean);
@@ -35,6 +35,7 @@ public class HandleAdminController {
 	@RequestMapping("/AddOneBookController")
 	public String voidshow(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		List<LoaiBean> lbean = lbo.getAllusers();
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
@@ -49,25 +50,27 @@ public class HandleAdminController {
 		response.getWriter().println(dirUrl1);
 		System.out.println(dirUrl1);
 		try {
-			List<FileItem> fileItems = upload.parseRequest(request);// Lấy về các đối tượng gửi lên
-			// duyệt qua các đối tượng gửi lên từ client gồm file và các control
+			List<FileItem> fileItems = upload.parseRequest(request);// Láº¥y vá»� cÃ¡c Ä‘á»‘i tÆ°á»£ng gá»­i lÃªn
+			// duyá»‡t qua cÃ¡c Ä‘á»‘i tÆ°á»£ng gá»­i lÃªn tá»« client gá»“m file vÃ  cÃ¡c
+			// control
 			for (FileItem fileItem : fileItems) {
-				if (!fileItem.isFormField()) {// Nếu ko phải các control=>upfile lên
-					// xử lý file
+				if (!fileItem.isFormField()) {// Náº¿u ko pháº£i cÃ¡c control=>upfile lÃªn
+					// xá»­ lÃ½ file
 					nameimg = fileItem.getName();
 					if (!nameimg.equals("")) {
-						// Lấy đường dẫn hiện tại, chủ ý xử lý trên dirUrl để có đường dẫn đúng
+						// Láº¥y Ä‘Æ°á»�ng dáº«n hiá»‡n táº¡i, chá»§ Ã½ xá»­ lÃ½ trÃªn dirUrl Ä‘á»ƒ cÃ³
+						// Ä‘Æ°á»�ng dáº«n Ä‘Ãºng
 						String dirUrl = request.getServletContext().getRealPath("") + File.separator + "hinh";
 						File dir = new File(dirUrl);
-						if (!dir.exists()) {// nếu ko có thư mục thì tạo ra
+						if (!dir.exists()) {// náº¿u ko cÃ³ thÆ° má»¥c thÃ¬ táº¡o ra
 							dir.mkdir();
 						}
 						String fileImg = dirUrl + File.separator + nameimg;
-						File file = new File(fileImg);// tạo file
+						File file = new File(fileImg);// táº¡o file
 						try {
-							fileItem.write(file);// lưu file
-							System.out.println("UPLOAD THÀNH CÔNG...!");
-							System.out.println("Đường dẫn lưu file là: " + dirUrl);
+							fileItem.write(file);// lÆ°u file
+							System.out.println("UPLOAD THÃ€NH CÃ”NG...!");
+							System.out.println("Ä�Æ°á»�ng dáº«n lÆ°u file lÃ : " + dirUrl);
 							request.setAttribute("memay1", dirUrl);
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -120,6 +123,24 @@ public class HandleAdminController {
 		urlimage = "hinh/" + nameimg;
 		AddSachBo bo = new AddSachBo();
 		try {
+			List<String> ds = bo.ListPhone();
+			for (int i = 0; i < ds.size(); i++) {
+				if (madienthoai.equals(ds.get(i))) {
+					request.setAttribute("error", "Duplicate madienthoai");
+					request.setAttribute("madienthoai", madienthoai);
+					request.setAttribute("loai", lbean);
+					request.setAttribute("tendienthoai", tendienthoai);
+					request.setAttribute("manhinh", manhinh);
+					request.setAttribute("gia", gia);
+					request.setAttribute("hedieuhanh", hedieuhanh);
+					request.setAttribute("camerasau", camerasau);
+					request.setAttribute("cameratruoc", cameratruoc);
+					request.setAttribute("ram", ram);
+					request.setAttribute("bonhotrong", bonhotrong);
+					request.setAttribute("cpu", cpu);
+					return "ThemSachDuTru";
+				}
+			}
 			bo.themdienthoai(madienthoai, tendienthoai, manhinh, gia, hedieuhanh, loai, cpu, urlimage, camerasau,
 					cameratruoc, ram, bonhotrong);
 			request.setAttribute("them", "them");

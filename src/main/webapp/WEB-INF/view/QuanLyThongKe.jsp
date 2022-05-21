@@ -12,7 +12,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <title>Admin - Quản Lý Điện Thoại</title>
 
 <!-- Custom fonts for this template-->
@@ -70,12 +70,12 @@
 
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="QlPhone">
+			<li class="nav-item active"><a class="nav-link" href="QuanLyPhone">
 					<i class="fas fa-fw fa-tachometer-alt"></i> <span>Quản Lý
 						Điện Thoại</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="AdminThanhToanController"> <i
+				href="QuanLyKhachHang"> <i
 					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
 						Hàng</span>
 			</a></li>

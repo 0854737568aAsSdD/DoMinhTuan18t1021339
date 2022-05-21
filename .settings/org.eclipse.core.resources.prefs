@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/dmt/controller/AdminController.java=UTF-8
 encoding//src/main/java/com/dmt/controller/DatMuaHangController.java=UTF-8
+encoding//src/main/java/com/dmt/controller/HandleAdminController.java=UTF-8
 encoding//src/main/java/com/dmt/controller/KhachHangController.java=UTF-8
 encoding//src/main/java/com/dmt/controller/ThongKeController.java=UTF-8
+encoding//src/main/java/com/dmt/controller/UpfileSuaSachLenServer.java=UTF-8
+encoding//src/main/java/com/dmt/dao/AddSachDao.java=UTF-8
 encoding//src/main/java/com/dmt/dao/ChiTietHoaDonDao.java=UTF-8

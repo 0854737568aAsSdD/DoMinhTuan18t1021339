@@ -1,6 +1,9 @@
 package com.dmt.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddSachDao {
 	public void themdienthoai(String madienthoai, String tendienthoai, String manhinh, int gia, String hedieuhanh,
@@ -34,11 +37,11 @@ public class AddSachDao {
 			String bonhotrong) throws Exception {
 		DungChung dc = new DungChung();
 		dc.KetNoi();
-		String sql = "update DienThoai\r\n" + "	set tendienthoai = ?\r\n" + "	,manhinh = ?\r\n" + "	,gia = ?\r\n"
-				+ "	,hedieuhanh = ?\r\n" + "	,maloai = ?\r\n" + "	, cpu = ?\r\n" + "	, anh = ?\r\n"
-				+ "	, camerasau = ?\r\n" + "	, cameratruoc = ?\r\n" + "	, ram = ?\r\n" + "	, bonhotrong = ?\r\n"
-				+ "where madienthoai = ?";
-		System.out.println(sql);
+//		String sql = "update DienThoai\r\n" + "	set tendienthoai = ?\r\n" + "	,manhinh = ?\r\n" + "	,gia = ?\r\n"
+//				+ "	, hedieuhanh = ?\r\n" + "	, maloai = ?\r\n" + "	, cpu = ?\r\n" + "	, anh = ?\r\n"
+//				+ "	, camerasau = ?\r\n" + "	, cameratruoc = ?\r\n" + "	, ram = ?\r\n" + "	, bonhotrong = ?\r\n"
+//				+ " where madienthoai = ?";
+		String sql = "update DienThoai set tendienthoai = ?, manhinh = ?, gia = ?, hedieuhanh = ? , maloai = ?, cpu = ?, anh = ? , camerasau = ?, cameratruoc = ?, ram = ?, bonhotrong = ? where madienthoai = ? ";
 		PreparedStatement cmd = dc.cn.prepareStatement(sql);
 		cmd.setString(1, tendienthoai);
 		cmd.setString(2, manhinh);
@@ -66,6 +69,22 @@ public class AddSachDao {
 		cmd.executeUpdate();
 		cmd.close();
 		dc.cn.close();
+	}
+
+	public List<String> ListPhone() throws Exception {
+		DungChung dc = new DungChung();
+		dc.KetNoi();
+		List<String> ds = new ArrayList<String>();
+		String sql = "select madienthoai from DienThoai";
+		PreparedStatement cmd = dc.cn.prepareStatement(sql);
+		ResultSet rs = cmd.executeQuery();
+		while (rs.next()) {
+			String s = rs.getString("madienthoai");
+			ds.add(s);
+		}
+		cmd.close();
+		dc.cn.close();
+		return ds;
 	}
 
 }

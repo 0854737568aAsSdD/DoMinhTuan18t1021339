@@ -57,7 +57,11 @@ public class PhanHoiController {
 	@RequestMapping(value = "/AdminPhanHoi", method = RequestMethod.GET)
 	public String phanhoi(HttpServletRequest request) {
 		String maphanhoi = request.getParameter("maphanhoi");
+		String tenkhachhang = request.getParameter("tenkhachhang");
+		String noidung = request.getParameter("noidung");
 		request.setAttribute("maphanhoi", maphanhoi);
+		request.setAttribute("tenkhachhang", tenkhachhang);
+		request.setAttribute("noidung", noidung);
 		return "LoiNhan";
 	}
 
@@ -82,8 +86,14 @@ public class PhanHoiController {
 	@RequestMapping(value = "/tinnhan", method = RequestMethod.GET)
 	public String voidshow1234563434(HttpServletRequest request, HttpSession session) {
 		KhachHangBean kh = (KhachHangBean) session.getAttribute("khachhang");
-		int makh = kh.getMakh();
 		PhanHoiBo bo = new PhanHoiBo();
+		int makh = 0;
+		if (kh == null) {
+			request.setAttribute("Login", "1");
+			return "TinNhan";
+		} else {
+			makh = kh.getMakh();
+		}
 		try {
 			ArrayList<PhanHoiBean> ds = bo.showloinhanadmin(makh);
 			request.setAttribute("phanhoi", ds);

@@ -20,7 +20,10 @@
 
 <!-- Page level plugin CSS-->
 <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
-
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	crossorigin="anonymous">
 <!-- Custom styles for this template-->
 <link href="css/admin.css" rel="stylesheet">
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -55,14 +58,14 @@
 		</button>
 
 		<!-- Navbar Search -->
-		<form action="Admin" method="get"
-			class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+		<form action="QuanLyPhone" method="get"
+				class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<div class="input-group">
 				<input type="text" class="form-control"
-					placeholder="Search for book" aria-label="Search"
+					placeholder="Search for phone" aria-label="Search"
 					aria-describedby="basic-addon2" name="tkttk">
 				<div class="input-group-append">
-					<button class="btn btn-primary" type="button">
+					<button class="btn btn-primary" type="submit">
 						<i class="fas fa-search"></i>
 					</button>
 				</div>
@@ -82,24 +85,22 @@
 
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="QlPhone">
-					<i class="fas fa-fw fa-tachometer-alt"></i> <span>Quản Lý
-						Điện Thoại</span>
+			<li class="nav-item active"><a class="nav-link"
+				href="QuanLyPhone"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Quản Lý Điện Thoại</span>
 			</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="AdminThanhToanController"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
+			<li class="nav-item"><a class="nav-link" href="QuanLyKhachHang">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
 						Hàng</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link" href="QuanLyPhanHoi">
 					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Phản
 						Hồi</span>
-			</a>
-			</li>
-						<li class="nav-item"><a class="nav-link" href="QuanLyThongKe">
-					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Thống Kê</span>
-			</a>
-			</li>
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="QuanLyThongKe">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Thống
+						Kê</span>
+			</a></li>
 		</ul>
 
 		<div id="content-wrapper">
@@ -198,7 +199,7 @@
 					</select>
 
 				</div>
-				<a href="TramTrungChuyen"> Thêm Điện Thoại</a>
+				<a href="AdminAdd"> Thêm Điện Thoại</a>
 
 				<script language="javascript">
 					function genderChanged(obj) {
@@ -206,12 +207,10 @@
 						result.value = value;
 					}
 				</script>
-				<form action="QlPhone" method="get">
+				<form action="QuanLyPhone" method="get">
 					<input type="hidden" id="result" value="" name="txtloai" /> <input
 						type="submit" value="Tìm Điện Thoại">
 				</form>
-
-
 				<!-- DataTables Example -->
 				<div class="card mb-3">
 					<div class="card-header">
@@ -252,7 +251,7 @@
 											<td>${s.bonhotrong}</td>
 											<td>${s.gia}</td>
 											<td><a
-												href="TauVuTru?madienthoai=${s.madienthoai}&
+												href="AdminUpdate?madienthoai=${s.madienthoai}&
 											tendienthoai=${s.tendienthoai}&
 											gia=${s.gia}&
 											manhinh=${s.manhinh}&

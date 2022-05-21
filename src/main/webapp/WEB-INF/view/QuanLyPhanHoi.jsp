@@ -23,7 +23,10 @@
 
 <!-- Custom styles for this template-->
 <link href="css/admin.css" rel="stylesheet">
-
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	crossorigin="anonymous">
 </head>
 
 <body id="page-top">
@@ -65,18 +68,21 @@
 
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="QlPhone">
-					<i class="fas fa-fw fa-tachometer-alt"></i> <span>Quản Lý
-						Điện Thoại</span>
+			<li class="nav-item active"><a class="nav-link"
+				href="QuanLyPhone"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Quản Lý Điện Thoại</span>
 			</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="AdminThanhToanController"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
+			<li class="nav-item"><a class="nav-link" href="QuanLyKhachHang">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
 						Hàng</span>
 			</a></li>
-				<li class="nav-item"><a class="nav-link"
-				href="QuanLyPhanHoi"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Phản Hồi</span>
+			<li class="nav-item"><a class="nav-link" href="QuanLyPhanHoi">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Phản
+						Hồi</span>
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="QuanLyThongKe">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Thống
+						Kê</span>
 			</a></li>
 		</ul>
 
@@ -87,7 +93,7 @@
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Admin</a></li>
-					<li class="breadcrumb-item active">Quản Lý Khách Hàng</li>
+					<li class="breadcrumb-item active">Quản Lý Phản Hồi</li>
 				</ol>
 
 				<!-- Icon Cards-->
@@ -165,8 +171,8 @@
 								cellspacing="0">
 								<thead>
 									<tr>
-									    <th>Mã Khách Hàng </th>
-										<th>Tên Khách Hàng </th>
+										<th>Mã Khách Hàng</th>
+										<th>Tên Khách Hàng</th>
 										<th>Nội Dung Phản Hồi</th>
 										<th>Tình Trạng Phản Hồi</th>
 									</tr>
@@ -176,22 +182,22 @@
 									<c:forEach items="${phanhoi}" var="t">
 										<tr>
 											<td>${t.getMakh()}</td>
-											<td>${t.getHoten() } </td>
+											<td>${t.getHoten() }</td>
 											<td>${t.getNoidung()}</td>
-											<td>
-											<c:choose>
-											<c:when test="${t. getXacnhan() == 0}">
-											<p> Đã Gửi Cho Admin</p>
-											<a href ="AdminPhanHoi?maphanhoi=${t.getMaphanhoi() }" > Trả Lời  </a>
-									        </c:when>
-									        <c:when test="${t.getXacnhan() == 1 }">
-									        <p> Admin đã phản hồi </p>
-									        </c:when>
-											<c:otherwise>
-											<p>  </p>
-											</c:otherwise>									
-											</c:choose>					
-										    </td>							
+											<td><c:choose>
+													<c:when test="${t. getXacnhan() == 0}">
+														<p>Đã Gửi Cho Admin</p>
+														<a
+															href="AdminPhanHoi?maphanhoi=${t.getMaphanhoi() }&tenkhachhang=${t.getHoten() }&noidung=${t.getNoidung()}">
+															Trả Lời </a>
+													</c:when>
+													<c:when test="${t.getXacnhan() == 1 }">
+														<p>Admin đã phản hồi</p>
+													</c:when>
+													<c:otherwise>
+														<p></p>
+													</c:otherwise>
+												</c:choose></td>
 										</tr>
 									</c:forEach>
 								</tbody>

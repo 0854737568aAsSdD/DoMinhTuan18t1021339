@@ -16,7 +16,6 @@ import com.dmt.bean.LoaiBean;
 import com.dmt.bo.AdminBo;
 import com.dmt.bo.DienThoaiBo;
 import com.dmt.bo.LoaiBo;
-import com.dmt.utills.MD5;
 import com.dmt.utills.VerifyUtils;
 
 @Controller
@@ -46,9 +45,9 @@ public class AdminController {
 					// Verify CAPTCHA.
 					valid = VerifyUtils.verify(gRecaptchaResponse);
 					if (valid == true) {
-						System.out.println("Đã vào đây");
+						System.out.println("Ä�Ã£ vÃ o Ä‘Ã¢y");
 						session.setAttribute("admin", kh);
-						return "HomeAdmin";
+						return "redirect:QuanLyPhone";
 					} else {
 						request.setAttribute("SaiCapcha", "1");
 					}
@@ -64,7 +63,7 @@ public class AdminController {
 
 	}
 
-	@RequestMapping(value = "/QlPhone", method = RequestMethod.GET)
+	@RequestMapping(value = "/QuanLyPhone", method = RequestMethod.GET)
 	public String GetSach(HttpServletRequest request, HttpSession session) {
 
 		try {
@@ -72,18 +71,26 @@ public class AdminController {
 			System.out.println(lbean.size());
 			List<DienThoaiBean> dbean = dbo.getPhone();
 			String loaidth = request.getParameter("txtloai");
-			String timkiem = request.getParameter("txttk");
+			String timkiem = request.getParameter("tkttk");
 			request.setAttribute("loai", lbean);
-			if (loaidth == null) {
+			if (loaidth == null && timkiem == null) {
 				request.setAttribute("tensach", dbean);
-			} else {
+			} else if (loaidth != null && timkiem == null) {
 				dbean = dbo.getDienThoai(loaidth);
 				request.setAttribute("tensach", dbean);
+			} else if (loaidth == null && timkiem != null) {
+				dbean = dbo.getTimKiem(timkiem);
+				request.setAttribute("tensach", dbean);
 			}
+
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 		return "HomeAdmin";
 	}
 
+	@RequestMapping(value = "/HomeAdmin", method = RequestMethod.GET)
+	public String HomeAdmin() {
+		return "HomeAdmin";
+	}
 }

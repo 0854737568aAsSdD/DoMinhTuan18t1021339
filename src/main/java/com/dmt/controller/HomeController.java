@@ -14,5 +14,9 @@ public class HomeController {
 	public String voidshow123() {
 		return "Home";
 	}
+	@RequestMapping("/ShowGioHang")
+	public String voidHome() {
+		return "Cart";
+	}
 
 }

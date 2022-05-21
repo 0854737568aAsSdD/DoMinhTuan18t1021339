@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contact V4</title>
+<title>Add Product</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -45,7 +45,7 @@
 					<div>
 						<c:if test="${themsach !=null}">
 							<h3 style="color: red; font-family: serif; font-size: 20px;">
-								Add Book Complete!</h3>
+								Add Phone Complete!</h3>
 							<a href="Admin"> Back To Admin Page!</a>
 						</c:if>
 					</div>
@@ -55,61 +55,68 @@
 					data-validate="Name is required">
 					<span class="label-input100">Mã Điện Thoại</span> <input
 						id="txtmasach" name="txtmadienthoai" placeholder="Mã Điện Thoại"
-						class="input100" required="" type="text"> <span
-						class="focus-input100"></span>
+						class="input100" required="" type="text">
+					<div>
+						<span class="form-message" style="color: red"> ${error }</span>
+					</div>
 				</div>
 
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
 					<span class="label-input100">Tên Điện Thoại</span> <input
-						id="txttensach" name="txttendienthoai"
+						value="${tendienthoai }" id="txttensach" name="txttendienthoai"
 						placeholder="Tên Điện Thoại" class="input100" required=""
 						type="text"> <span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
-					<span class="label-input100">Màn Hình</span> <input id="txtmanhinh"
-						name="txtmanhinh" placeholder="Màn Hình" class="input100"
-						required="" type="text"> <span class="focus-input100"></span>
+					<span class="label-input100">Màn Hình</span> <input
+						value="${manhinh }" id="txtmanhinh" name="txtmanhinh"
+						placeholder="Màn Hình" class="input100" required="" type="text">
+					<span class="focus-input100"></span>
 				</div>
-								<div class="wrap-input100 validate-input"
+				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
-					<span class="label-input100">Camera Sau</span> <input id="txtcamerasau"
-						name="txtcamerasau" placeholder="Camera Sau" class="input100"
-						required="" type="text"> <span class="focus-input100"></span>
+					<span class="label-input100">Camera Sau</span> <input
+						value="${camerasau }" id="txtcamerasau" name="txtcamerasau"
+						placeholder="Camera Sau" class="input100" required="" type="text">
+					<span class="focus-input100"></span>
 				</div>
-												<div class="wrap-input100 validate-input"
+				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
-					<span class="label-input100">Camera Trước</span> <input id="txtcameratruoc"
-						name="txtcameratruoc" placeholder="Camera Trước" class="input100"
-						required="" type="text"> <span class="focus-input100"></span>
+					<span class="label-input100">Camera Trước</span> <input
+						value="${cameratruoc }" id="txtcameratruoc" name="txtcameratruoc"
+						placeholder="Camera Trước" class="input100" required=""
+						type="text"> <span class="focus-input100"></span>
 				</div>
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
 					<span class="label-input100">RAM</span> <input id="txtram"
-						name="txtram" placeholder="Ram" class="input100"
+						value="${ram }" name="txtram" placeholder="Ram" class="input100"
 						required="" type="text"> <span class="focus-input100"></span>
 				</div>
-					<div class="wrap-input100 validate-input"
-					data-validate="Name is required">
-					<span class="label-input100">Bộ Nhớ Trong</span> <input id="txtbonhotrong"
-						name="txtbonhotrong" placeholder="Bộ Nhớ Trong" class="input100"
-						required="" type="text"> <span class="focus-input100"></span>
-				</div>
-				
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
-					<span class="label-input100">Giá</span> <input id="txthedieuhanh"
-						name="txtgia" placeholder="Giá" class="input100" required=""
-						type="number"> <span class="focus-input100"></span>
+					<span class="label-input100">Bộ Nhớ Trong</span> <input
+						value="${bonhotrong }" id="txtbonhotrong" name="txtbonhotrong"
+						placeholder="Bộ Nhớ Trong" class="input100" required=""
+						type="text"> <span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input"
+					data-validate="Name is required">
+					<span class="label-input100">Giá</span> <input value="${gia }"
+						id="txthedieuhanh" name="txtgia" placeholder="Giá"
+						class="input100" required="" type="number"> <span
+						class="focus-input100"></span>
 				</div>
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
 					<span class="label-input100">Hệ Điều Hành</span> <input
-						id="txtsoluong" name="txthedieuhanh" placeholder="Hệ Điều Hành"
-						class="input100" required="" type="text"> <span
-						class="focus-input100"></span>
+						value="${hedieuhanh }" id="txtsoluong" name="txthedieuhanh"
+						placeholder="Hệ Điều Hành" class="input100" required=""
+						type="text"> <span class="focus-input100"></span>
 				</div>
 				<div class="wrap-input100 input100-select">
 					<span class="label-input100">Thể Loại</span>
@@ -135,15 +142,18 @@
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
 					<span class="label-input100">CPU</span> <input id="txtsotap"
-						name="txtcpu" placeholder="CPU" class="input100" required=""
-						type="text"> <span class="focus-input100"></span>
+						value="${cpu }" name="txtcpu" placeholder="CPU" class="input100"
+						required="" type="text"> <span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input"
 					data-validate="Name is required">
-					<span class="label-input100">Ảnh</span> <input id="txtfile"
-						name="txtfile" placeholder="Ảnh" class="input100" required=""
-						type="file"> <span class="focus-input100"></span>
+					<span class="label-input100">Ảnh</span> <img alt="" src="${anh }">
+					<input id="txtfile" name="txtfile" placeholder="Ảnh"
+						class="input100" required="" type="file"
+						onchange="previewFile(this);"> <span
+						class="focus-input100"></span>
+					<div id="preview"></div>
 				</div>
 
 				<div class="container-contact100-form-btn">
@@ -159,11 +169,24 @@
 			</form>
 		</div>
 	</div>
-
-
-
 	<div id="dropDownSelect1"></div>
-
-
+	<script type="text/javascript">
+	function previewFile(input) {
+		const [file] = input.files
+		const preview = document.getElementById('preview')
+		const reader = new FileReader()
+		
+		reader.onload = e => {
+			const img = document.createElement('img')
+			img.src = e.target.result
+			img.width = 200
+			img.height = 200 
+			img.alt ='file'
+			preview.appendChild(img)
+		}
+		reader.readAsDataURL(file)
+		
+	}
+	</script>
 </body>
 </html>

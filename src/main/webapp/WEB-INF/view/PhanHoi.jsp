@@ -137,13 +137,20 @@ footer img {
 </head>
 
 <body>
-			<c:if test="${not empty daphanhoi }">
-					<script type="text/javascript">
+	<c:if test="${not empty daphanhoi }">
+		<script type="text/javascript">
 			$(window).on('load', function() {
 				$('#myModal456').modal('show');
 			});
 		</script>
-				</c:if>
+	</c:if>
+		<c:if test="${not empty daphanhoi }">
+		<script type="text/javascript">
+			$(window).on('load', function() {
+				$('#myModal456').modal('show');
+			});
+		</script>
+	</c:if>
 	<c:set var="language" value="${khachhang.getHoten()}" scope="session" />
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-sm bg-dark justify-content-center"
@@ -177,73 +184,14 @@ footer img {
 >
 				</c:if>
 
-
-
 			</ul>
-			<form style="padding-left: 10%; position: relative;">
-				<div class="input-group mb-3" id="formtk">
-					<input id="myInput" class="form-control" type="text"
-						placeholder="Tìm kiếm sản phẩm..">
-					<div class="input-group-append">
-						<button class="btn btn-light " type="submit">Go</button>
-					</div>
-				</div>
-				<ul class="listSP " id="myList">
-					<li id="litest"><img
-						src="hinh/samsung-galaxy-s20-plus-400x460-fix-400x460.png"><a
-						href="Html/html20.html">Samsung Galaxy S20+</a></li>
-					<li><img src="hinh/iphone-11.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 64GB</a></li>
-					<li><img src="hinh/xiaomi-redmi-note-9s.jpg"><a
-						href="Html/htmlredmi9s.html">Xiaomi Redmi Note 9S </a></li>
-					<li><img src="hinh/oppo-a52-spec-720x333.jpg"><a
-						href="Html/htmlA52.html">OPPO A52</a></li>
-					<li><img src="hinh/nokia-53-den-600x600-400x400.jpg"><a
-						href="Html/htmlnokia5.3.html">Nokia 5.3</a></li>
-					<li><img src="hinh/realme-6i-trang-600-200x200.jpg"><a
-						href="Html/htmlredmi6i.html">Realme 6i</a></li>
-					<li><img src="hinh/samsung-galaxy-fold-black-400x400.jpg"><a
-						href="Html/htmlgalaxyford.html">Samsung Galaxy Fold</a></li>
-					<li><img src="hinh/iphone-11-pro-max-512gb-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone 11 Pro Max 512GB</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-z-flip-den-600x600-400x400.jpg"><a
-						href="Html/htmlgalaxyz.html">Samsung Galaxy Z Flip</a></li>
-					<li><img src="hinh/iphone-11-pro-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro 256GB</a></li>
-					<li><img src="hinh/iphone-11-pro-max-green-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone 11 Pro Max 64GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/htmliphone256.html">iPhone Xs Max 256GB</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-s20-ultra-600x600-1-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy S20 Ultra</a></li>
-					<li><img
-						src="hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg"><a
-						href="Html/html20.html">Samsung Galaxy Note 10+</a></li>
-					<li><img src="hinh/iphone-xs-max-gold-400x400.jpg"><a
-						href="Html/htmliphone11pro.html">iPhone Xs Max 64GB</a></li>
-					<li><img src="hinh/iphone-11-256gb-black-400x400.jpg"><a
-						href="Html/htmliphone11.html">iPhone 11 256GB</a></li>
-					<li><img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"><a
-						href="Html/html20.html">iPhone Xs 256GB</a></li>
-					<li><img src="hinh/huawei-p40-pro-600x600-3-400x400.jpg"><a
-						href="Html/html20.html">Huawei P40 Pro</a></li>
-					<li><img src="hinh/oppo-find-x2-blue-600x600-400x400.jpg"><a
-						href="Html/html20.html">OPPO Find X2</a></li>
-					<li><img src="hinh/blackberry-key2-4-400x400.jpg"><a
-						href="Html/html20.html">BlackBerry KEY2 </a></li>
-				</ul>
-			</form>
 
 		</nav>
-		<nav class="navbar bg-dark justify-content-center" id="nav2">
+				<nav class="navbar bg-dark justify-content-center" id="nav2">
 			<ul class="nav ">
 				<li class="nav-item"><a class="nav-link" href="Home">TRANG
 						CHỦ</a></li>
-				<li class="nav-item"><a class="nav-link" href="Home">GIỚI
+				<li class="nav-item"><a class="nav-link" href="About">GIỚI
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
@@ -254,50 +202,46 @@ footer img {
 
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">NHƯỢNG
-						QUYỀN </a></li>
+				<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
+						NHẮN </a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="LichSuController">THANH TOÁN</a></li>
+					href="LichSuController">LỊCH SỬ MUA</a></li>
 				<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 			</ul>
 		</nav>
 
 		<div class="col-md-12 col-lg-12 col-xs-12" id="form">
-				<form action="PhanHoi" method="post">
-					<div class="form-group">
-						<div class="text-light" id="thongbaodn" style="text-align: center"></div>
-					</div>
-					<fieldset class="form-group">
-						<input id="emailDN" type="text"
-							class="form-control form-control-lg" value name="phanhoi"
-							placeholder="Email" required> <span id="tbEDN"
-							class="text-light"></span>
-					</fieldset>
-					<div class="row">
-						<div class="col-md-12 cold-lg-12 col-sm-12 col-xl-12">
-							<input type="submit" class="btn btn-info" id="dangN"
-								style="width: 30%;" value="Phản Hồi">
-						</div>
-					</div>
-				</form>
-			</div>
-
-	<div class="modal fade" id="myModal456" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">×</button>
+			<form action="PhanHoi" method="post">
+				<div class="form-group">
+					<div class="text-light" id="thongbaodn" style="text-align: center"></div>
 				</div>
-				<div class="modal-body">
-					<h3 class="text-center">Bạn đã gửi phản hồi</h3>
+				<fieldset class="form-group">
+					<input id="emailDN" type="text"
+						class="form-control form-control-lg"  name="phanhoi"
+						placeholder="Mời bạn nhập thông tin phản hồi" required> <span id="tbEDN"
+						class="text-light"></span>
+				</fieldset>
+				<div class="row">
+					<div class="col-md-12 cold-lg-12 col-sm-12 col-xl-12">
+						<input type="submit" class="btn btn-info" id="dangN"
+							style="width: 30%;" value="Phản Hồi">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="modal fade" id="myModal456" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+					</div>
+					<div class="modal-body">
+						<h3 class="text-center">Bạn đã gửi phản hồi</h3>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-
-
-
 </body>
 
 </html>

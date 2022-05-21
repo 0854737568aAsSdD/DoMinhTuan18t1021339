@@ -20,7 +20,7 @@ public class DeleteController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "HomeAdmin";
+		return "redirect:/QuanLyPhone";
 	}
 
 }

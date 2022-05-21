@@ -14,7 +14,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Admin - Quản Lý Điện Thoại</title>
+<title>Admin - Quản Lý Khách Hàng</title>
 
 <link href="css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -23,7 +23,10 @@
 
 <!-- Custom styles for this template-->
 <link href="css/admin.css" rel="stylesheet">
-
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	crossorigin="anonymous">
 </head>
 
 <body id="page-top">
@@ -65,18 +68,21 @@
 
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="QlPhone">
+			<li class="nav-item active"><a class="nav-link" href="QuanLyPhone">
 					<i class="fas fa-fw fa-tachometer-alt"></i> <span>Quản Lý
 						Điện Thoại</span>
 			</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="AdminThanhToanController"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
+			<li class="nav-item"><a class="nav-link" href="QuanLyKhachHang">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
 						Hàng</span>
 			</a></li>
-				<li class="nav-item"><a class="nav-link"
-				href="QuanLyPhanHoi"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Phản Hồi</span>
+			<li class="nav-item"><a class="nav-link" href="QuanLyPhanHoi">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Phản
+						Hồi</span>
+			</a></li>
+			<li class="nav-item"><a class="nav-link" href="QuanLyPhanHoi">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Thống
+						kê</span>
 			</a></li>
 		</ul>
 
@@ -166,7 +172,7 @@
 								<thead>
 									<tr>
 										<th>Mã Hóa Đơn</th>
-										<th>Tên Khách Hàng </th>
+										<th>Tên Khách Hàng</th>
 										<th>Mã Khách Hàng</th>
 										<th>Ngày Mua</th>
 										<th>Số Lượng Mua</th>
@@ -179,25 +185,25 @@
 									<c:forEach items="${thanhtoan}" var="t">
 										<tr>
 											<td>${t.getMaHoaDon()}</td>
-											<td>${t.getTenKh() } </td>
+											<td>${t.getTenKh() }</td>
 											<td>${t.getMakh()}</td>
 											<td>${t.getNgayMua()}</td>
 											<td>${t.getSoLuongMua()}</td>
 											<td>${t.getGia()}</td>
-											<td>
-											<c:choose>
-											<c:when test="${t.getDamua() == 0}">
-											<p> Đã Thanh Toán</p>
-											<a href ="XacNhanChoAdminController?machitiet=${t.getMaChiTietHoaDon() }" > Xác Nhận  </a>
-									        </c:when>
-									        <c:when test="${t.getDamua() == 1 }">
-									        <p> Admin đã xác nhận thành công </p>
-									        </c:when>
-											<c:otherwise>
-											<p> Chưa Thanh Toán </p>
-											</c:otherwise>									
-											</c:choose>					
-										    </td>							
+											<td><c:choose>
+													<c:when test="${t.getDamua() == 0}">
+														<p>Đã Thanh Toán</p>
+														<a
+															href="QuanLyXacNhan?machitiet=${t.getMaChiTietHoaDon() }">
+															Xác Nhận </a>
+													</c:when>
+													<c:when test="${t.getDamua() == 1 }">
+														<p>Admin đã xác nhận thành công</p>
+													</c:when>
+													<c:otherwise>
+														<p>Chưa Thanh Toán</p>
+													</c:otherwise>
+												</c:choose></td>
 										</tr>
 									</c:forEach>
 								</tbody>

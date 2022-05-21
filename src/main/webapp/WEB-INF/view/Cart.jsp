@@ -34,6 +34,13 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Height of the footer */
+	background: #6cf;
+}
 </style>
 </head>
 <body>
@@ -56,22 +63,20 @@
 			</div>
 			<nav class="navbar bg-dark justify-content-center" id="nav2">
 				<ul class="nav " id="reponsive">
-					<li class="nav-item"><a class="nav-link" href="About">TRANG
+					<li class="nav-item"><a class="nav-link" href="Home">TRANG
 							CHỦ</a></li>
-					<li class="nav-item"><a class="nav-link" href="Home">GIỚI
+					<li class="nav-item"><a class="nav-link" href="About">GIỚI
 							THIỆU</a></li>
 					<li class="nav-item"><a class="nav-link" href="phone">SẢN
 							PHẨM</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#">DỊCH VỤ</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="#">NHƯỢNG
-							QUYỀN </a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
+							HỒI</a></li>
+					<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
+							NHẮN </a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="LichSuController">THANH TOÁN</a></li>
-					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a>
-					</li>
+						href="LichSuController">LỊCH SỬ MUA</a></li>
+					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -95,7 +100,7 @@
 	%>
 	<h3 style="text-align: center;">Giỏ Hàng Trống</h3>
 	<div style="text-align: center;">
-		<a href="phone"> Mua Thêm</a>
+		<a href="phone" style="color: blueviolet"> Mua Thêm</a>
 
 	</div>
 	<%
@@ -205,7 +210,7 @@
 				<div class="modal-body">
 					<h3 class="text-center">Bạn đã mua hàng thành công</h3>
 					<div style="text-align: center;">
-						<a href="LichSuController"">Xem Ngay</a>
+						<a href="LichSuController"" style="color: red;">Xem Ngay</a>
 					</div>
 				</div>
 			</div>
@@ -215,21 +220,14 @@
 
 	<!-- ------------footer----------- -->
 	<footer class="navbar navbar-expand-sm bg-dark" id="footer">
-		<div class="col-md-1 ">
-			<a> <img src="hinh/python.jpg">
-			</a>
+		<div class="col-md-2">
+			<a href="#">Chính sách bảo hành</a> <br> 
 		</div>
 		<div class="col-md-2">
-			<a href="#">Chính sách bảo hành</a> <br> <a href="#">Chính
-				sách đổi trả</a>
+			<a href="#">Hướng dẫn mua online</a> <br>
 		</div>
 		<div class="col-md-2">
-			<a href="#">Hướng dẫn mua online</a> <br> <a href="#">Nội
-				quy cửa hàng</a>
-		</div>
-		<div class="col-md-2">
-			<a href="#">Phương thức thanh toán</a> <br> <a href="#">Phương
-				thức vận chuyển</a>
+			<a href="#">Phương thức thanh toán</a> <br>
 		</div>
 		<div class="col-md-1"></div>
 		<div class="col-md-3" id="imgf">

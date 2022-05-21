@@ -14,7 +14,7 @@ import com.dmt.bo.XacNhanThanhToanBo;
 
 @Controller
 public class AdminThanhToanController {
-	@RequestMapping("/AdminThanhToanController")
+	@RequestMapping("/QuanLyKhachHang")
 	public String voidshow(HttpServletRequest request) {
 		try {
 			ThongTinThanhToanBo thongtin = new ThongTinThanhToanBo();
@@ -25,7 +25,7 @@ public class AdminThanhToanController {
 		}
 		return "QuanLyKhachHang";
 	}
-	@RequestMapping("/XacNhanChoAdminController")
+	@RequestMapping("/QuanLyXacNhan")
 		public String voidshow123(HttpServletRequest request, HttpServletResponse response) {
 			try {
 				request.setCharacterEncoding("utf-8");
