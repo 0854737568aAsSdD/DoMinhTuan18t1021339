@@ -34,13 +34,13 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-#footer {
-	position: absolute;
+/* #footer1 {
+/* 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 60px; /* Height of the footer */
-	background: #6cf;
-}
+	background: #6cf; */
+} */
 </style>
 </head>
 <body>

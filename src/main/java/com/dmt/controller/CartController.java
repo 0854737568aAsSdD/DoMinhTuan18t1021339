@@ -17,7 +17,6 @@ public class CartController {
 	public String themhang(HttpServletRequest request, HttpSession session) {
 		CartBo bo = new CartBo();
 		String makh = request.getParameter("makh");
-		String a = request.getParameter("xoa");
 		if (makh == null) {
 			return "ThemSai";
 		} else {

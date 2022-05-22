@@ -21,7 +21,7 @@
 <style>
 .chat-btn {
 	position: absolute;
-	right: 5px;
+	right: -65px;
 	bottom: 30px;
 	cursor: pointer
 }
@@ -70,7 +70,8 @@
 	background-color: #fff;
 	border-radius: 5px;
 	opacity: 0;
-	transition: all 0.4s
+	transition: all 0.4s;
+	display: none;
 }
 
 #check:checked ~.wrapper {
@@ -138,7 +139,15 @@
 	border: solid 1px #ccc;
 	background-color: #00BFFF;
 }
+
+.myactive{
+	background: silver;
+}
 </style>
+<script type="text/javascript">
+var element = document.getElementById("mynav");
+element.classList.add("active");
+</script>
 </head>
 <body
 	<c:set var="language" value="${khachhang.getHoten()}" scope="session" />
@@ -169,7 +178,7 @@
 				<c:if test="${not empty khachhang}">
 					<ul>
 						<li class="nav-item" style="color: yellow;">Hello, ${language }</li>
-						<li class="nav-item"><span><a href="KiemTra?kiemtra=0">Đăng
+						<li class="nav-item"><span><a href="Logout">Đăng
 									Xuất</a></span></li>
 					</ul>
 >
@@ -187,14 +196,15 @@
 		</nav>
 		<div>
 			<nav class="navbar bg-dark justify-content-center" id="nav2">
-				<ul class="nav ">
-					<li class="nav-item"><a class="nav-link" href="Home">TRANG
-							CHỦ</a></li>
+				<ul class="nav">
+					<li class="nav-item" id="mynav"><a class="nav-link"
+						href="Home" onclick="myFunction()">TRANG CHỦ</a></li>
 					<li class="nav-item"><a class="nav-link" href="About">GIỚI
 							THIỆU</a></li>
 					<li class="nav-item"><a class="nav-link" href="phone">SẢN
 							PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+					<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+							HÀNG</a></li>
 
 					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 							HỒI</a></li>
@@ -233,12 +243,13 @@
 
 					<ul class="homeproduct" id="homeproduct">
 						<c:forEach items="${phone}" var="c">
-							<li class="item"><a href="Html/htmlA92.html"> <img
-									width="180" height="180" src="${c.anh}">
+							<li class="item"><a
+								href="ProductDetail?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}&manhinh=${c.manhinh}&camerasau=${c.camerasau}&cameratruoc=${c.cameratruoc}&hedieuhanh=${c.hedieuhanh}&cpu=${c.cpu}&ram=${c.ram}&bonhotrong=${c.bonhotrong}">
+									<img width="180" height="180" src="${c.anh}">
 									<h3>${c.tendienthoai}</h3>
 									<div class="price">
 										<strong value>${c.gia} ₫</strong> <a style="color: blueviolet"
-											href="cart?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}$&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
+											href="cart?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
 											mua</a>
 									</div>
 									<div class="promo noimage">
@@ -250,10 +261,12 @@
 
 					</ul>
 					<input type="checkbox" id="check"> <label class="chat-btn"
-						for="check"> <i class="fa fa-commenting-o comment"></i> <i
+						for="check"
+						onclick="document.getElementById('id1').style.display = 'block'">
+						<i class="fa fa-commenting-o comment"></i> <i
 						class="fa fa-close close"></i>
 					</label>
-					<div class="wrapper">
+					<div class="wrapper" id="id1">
 						<div class="header">
 							<h6>Xin chào quý khách đến với hỗ trợ trực tuyến</h6>
 						</div>
@@ -292,6 +305,21 @@
 						}
 					</script>
 			</section>
+			<div style="margin-left: 550px">
+				<nav aria-label="Page navigation example">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link"
+							href="Pagination?start=0&end=5">1</a></li>
+						<li class=""><a class="page-link"
+							href="Pagination?start=5&end=5">2</a></li>
+						<li class=""><a class="page-link"
+							href="Pagination?start=10&end=5">3</a></li>
+						<li class=""><a class="page-link"
+							href="Pagination?start=15&end=5">4</a></li>
+
+					</ul>
+				</nav>
+			</div>
 			<footer class="navbar navbar-expand-sm bg-dark" id="footer">
 				<div class="col-md-1 ">
 					<a> <img src="hinh/python.jpg">

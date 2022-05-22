@@ -333,7 +333,7 @@
 					<button type="button" class="close" data-dismiss="modal">×</button>
 				</div>
 				<div class="modal-body">
-					<h3 class="text-center">Đã Thêm Sách Thành Công</h3>
+					<h3 class="text-center">Đã Thêm Sản Phẩm Thành Công</h3>
 				</div>
 			</div>
 		</div>

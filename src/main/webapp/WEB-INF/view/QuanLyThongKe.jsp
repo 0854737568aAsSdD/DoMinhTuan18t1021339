@@ -3,16 +3,17 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+	integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+	crossorigin="anonymous">
 <title>Admin - Quản Lý Điện Thoại</title>
 
 <!-- Custom fonts for this template-->
@@ -70,13 +71,12 @@
 
 		<!-- Sidebar -->
 		<ul class="sidebar navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="QuanLyPhone">
-					<i class="fas fa-fw fa-tachometer-alt"></i> <span>Quản Lý
-						Điện Thoại</span>
+			<li class="nav-item active"><a class="nav-link"
+				href="QuanLyPhone"> <i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Quản Lý Điện Thoại</span>
 			</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="QuanLyKhachHang"> <i
-					class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
+			<li class="nav-item"><a class="nav-link" href="QuanLyKhachHang">
+					<i class="fas fa-fw fa-chart-area"></i> <span>Quản Lý Khách
 						Hàng</span>
 			</a></li>
 			<li class="nav-item"><a class="nav-link" href="QuanLyPhanHoi">
@@ -96,7 +96,7 @@
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Admin</a></li>
-					<li class="breadcrumb-item active">Quản Lý Điện Thoại</li>
+					<li class="breadcrumb-item active">Quản Lý Thống Kê</li>
 				</ol>
 
 				<!-- Icon Cards-->

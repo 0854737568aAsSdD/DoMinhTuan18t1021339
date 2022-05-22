@@ -30,8 +30,7 @@ public class KhachHangController {
 		if (session.getAttribute("khachhang") != null) {
 			session.removeAttribute("khachhang");
 		}
-		return "About";
-
+		return "Home";
 	}
 
 	@RequestMapping(value = "/KiemTra", method = RequestMethod.POST)

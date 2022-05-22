@@ -14,8 +14,7 @@ import com.dmt.bean.DienThoaiBean;
 import com.dmt.bean.LoaiBean;
 import com.dmt.bo.DienThoaiBo;
 import com.dmt.bo.LoaiBo;
-
-
+import com.dmt.bo.PaginationBo;
 
 @Controller
 public class DienThoaiController {
@@ -26,18 +25,22 @@ public class DienThoaiController {
 
 	@RequestMapping(value = "phone", method = RequestMethod.GET)
 	public String getAlluser(HttpServletRequest request) {
+		PaginationBo pbo = new PaginationBo();
 		String maloai = request.getParameter("maloai");
 		String timkiem = request.getParameter("txtTimkiem");
 		System.out.println(timkiem);
 		List<DienThoaiBean> phone = new ArrayList<DienThoaiBean>();
-		if (maloai != null & timkiem==null) {
+		if (maloai != null & timkiem == null) {
 			phone = bo.getDienThoai(maloai);
-		} else if(maloai==null && timkiem!=null) {
+		} else if (maloai == null && timkiem != null) {
 			phone = bo.getTimKiem(timkiem);
-		}
-		else
-		{
-		phone = bo.getPhone();
+		} else {
+			try {
+				phone = pbo.getPagination(0, 5);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		request.setAttribute("phone", phone);
 		List<LoaiBean> loai = lbo.getAllusers();

@@ -202,13 +202,6 @@ footer img {
 
 			</ul>
 			<form style="padding-left: 10%; position: relative;">
-				<div class="input-group mb-3" id="formtk">
-					<input id="myInput" class="form-control" type="text"
-						placeholder="Tìm kiếm sản phẩm..">
-					<div class="input-group-append">
-						<button class="btn btn-light " type="submit">Go</button>
-					</div>
-				</div>
 			</form>
 
 		</nav>

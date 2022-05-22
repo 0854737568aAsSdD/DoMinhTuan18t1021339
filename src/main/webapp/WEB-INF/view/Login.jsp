@@ -257,7 +257,7 @@
 					</a></span></li>
 			</ul>
 		</nav>
-				<nav class="navbar bg-dark justify-content-center" id="nav2">
+		<nav class="navbar bg-dark justify-content-center" id="nav2">
 			<ul class="nav ">
 				<li class="nav-item"><a class="nav-link" href="Home">TRANG
 						CHỦ</a></li>
@@ -265,7 +265,8 @@
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+						HÀNG</a></li>
 
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
@@ -327,8 +328,8 @@
 				</form>
 				<br>
 				<p>Hoặc đăng nhập bằng</p>
-				<a href="LoginFacebook"><img src="hinh/fb.png"></a> <a
-					style="padding-left: 20px;" href=""><img
+				<a style="padding-left: 20px;"
+					href="${pageContext.request.contextPath}/auth/google"><img
 					src="hinh/google-512.png"></a> <br> <br>
 				<p>
 					Bạn quên mật khẩu nhấn <a href=""> <u> vào đây </u></a>
@@ -460,3 +461,4 @@
 
 </html>
 ml>
+
