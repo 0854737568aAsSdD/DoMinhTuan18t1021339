@@ -368,7 +368,8 @@
 
 					<!-- Modal Header -->
 					<div class="modal-header">
-						<h3 style="width: 100%; text-align: center;">Đăng kí Form</h3>
+						<h3 style="width: 100%; text-align: center;">Đăng ký tài
+							khoản</h3>
 						<button type="button" class="close" data-dismiss="modal">×</button>
 					</div>
 

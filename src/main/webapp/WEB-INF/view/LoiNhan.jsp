@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,10 +55,6 @@
  --%>
 	<div class="container">
 		<h3 style="text-align: center;">Nhập lời nhắn cho khách hàng</h3>
-		<h4 style="text-align: center;">Tên khách hàng là :
-			<%= request.getAttribute("tenkhachhang") %></h4>
-		<h4 style="text-align: center;">Nội dung cần trả lời là :
-			${noidung}</h4>
 		<form action="AdminPhanHoi" method="post" id="form-new">
 			<div class="form-group">
 				<label for="loinhan">Nhập lời nhắn:</label> <input type="text"

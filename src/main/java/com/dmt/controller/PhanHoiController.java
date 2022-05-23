@@ -38,7 +38,7 @@ public class PhanHoiController {
 				request.setAttribute("daphanhoi", "123");
 				request.setAttribute("phanhoi", "123");
 				bo.themloinhan(phanhoi, kh.getMakh());
-			}
+			} 
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

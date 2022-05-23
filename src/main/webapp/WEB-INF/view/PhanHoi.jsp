@@ -144,13 +144,14 @@ footer img {
 			});
 		</script>
 	</c:if>
-	<c:if test="${not empty daphanhoi }">
+		<c:if test="${empty daphanhoi }">
 		<script type="text/javascript">
 			$(window).on('load', function() {
-				$('#myModal456').modal('show');
+				$('#myModal789').modal('show');
 			});
 		</script>
 	</c:if>
+	
 	<c:set var="language" value="${khachhang.getHoten()}" scope="session" />
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-sm bg-dark justify-content-center"
@@ -235,6 +236,18 @@ footer img {
 					</div>
 					<div class="modal-body">
 						<h3 class="text-center">Bạn đã gửi phản hồi</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div class="modal fade" id="myModal789" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+					</div>
+					<div class="modal-body">
+						<h3 class="text-center">Bạn cần đăng nhập để phản hồi</h3>
 					</div>
 				</div>
 			</div>
