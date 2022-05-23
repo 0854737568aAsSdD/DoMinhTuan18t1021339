@@ -34,13 +34,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* #footer1 {
-/* 	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 60px; /* Height of the footer */
-	background: #6cf; */
-} */
+/
 </style>
 </head>
 <body>
@@ -69,7 +63,8 @@
 							THIỆU</a></li>
 					<li class="nav-item"><a class="nav-link" href="phone">SẢN
 							PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+					<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+							HÀNG</a></li>
 					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 							HỒI</a></li>
 					<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
@@ -180,6 +175,16 @@
 		<%
 		}
 		%>
+		<%
+		if (index == 0) {
+		%>
+		<br /> <br />
+		<div class="h5" style="text-align: center;">Hiện tại giỏ hàng
+			của bạn đang trống</div>
+		<br /> <br /> <br />
+		<%
+		}
+		%>
 	</div>
 
 
@@ -210,7 +215,7 @@
 				<div class="modal-body">
 					<h3 class="text-center">Bạn đã mua hàng thành công</h3>
 					<div style="text-align: center;">
-						<a href="LichSuController"" style="color: red;">Xem Ngay</a>
+						<a href="LichSuController" " style="color: red;">Xem Ngay</a>
 					</div>
 				</div>
 			</div>
@@ -221,7 +226,7 @@
 	<!-- ------------footer----------- -->
 	<footer class="navbar navbar-expand-sm bg-dark" id="footer">
 		<div class="col-md-2">
-			<a href="#">Chính sách bảo hành</a> <br> 
+			<a href="#">Chính sách bảo hành</a> <br>
 		</div>
 		<div class="col-md-2">
 			<a href="#">Hướng dẫn mua online</a> <br>

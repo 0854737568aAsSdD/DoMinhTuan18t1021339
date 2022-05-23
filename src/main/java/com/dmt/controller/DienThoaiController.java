@@ -43,6 +43,7 @@ public class DienThoaiController {
 			}
 		}
 		request.setAttribute("phone", phone);
+		request.setAttribute("soluong", phone.size());
 		List<LoaiBean> loai = lbo.getAllusers();
 		request.setAttribute("loai", loai);
 		return "Product";

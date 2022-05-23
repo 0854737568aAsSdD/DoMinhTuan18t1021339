@@ -164,7 +164,7 @@ footer img {
 				<c:if test="${not empty khachhang}">
 					<ul>
 						<li class="nav-item" style="color: yellow;">Hello, ${language }</li>
-						<li class="nav-item"><span><a href="Logout">Đăng
+						<li class="nav-item"><span><a href="DangXuat">Đăng
 									Xuất</a></span></li>
 					</ul>
 >
@@ -201,8 +201,7 @@ footer img {
 
 
 			</ul>
-			<form style="padding-left: 10%; position: relative;">
-			</form>
+			<form style="padding-left: 10%; position: relative;"></form>
 
 		</nav>
 		<nav class="navbar bg-dark justify-content-center" id="nav2">
@@ -213,7 +212,8 @@ footer img {
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+						HÀNG</a></li>
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
 				<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
@@ -230,20 +230,20 @@ footer img {
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="imgcard">
-						<img src="hinh/samsung-galaxy-fold-black-400x400.jpg" alt="">
+						<img src="hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg" alt="">
 						<div class="details"></div>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="imgcard">
 						<img height="400px"
-							src="hinh/samsung-galaxy-note-10-plus-blue-400x400.jpg" alt="">
+							src="hinh/iphone-se-256gb-2020-261920-101916-200x200.jpg" alt="">
 						<div class="details"></div>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="imgcard">
-						<img src="hinh/samsung-galaxy-z-flip-den-600x600-400x400.jpg"
+						<img src="hinh/iphone-xs-max-256gb-white-400x400.jpg"
 							alt="">
 						<div class="details"></div>
 					</div>
@@ -251,7 +251,7 @@ footer img {
 				<div class="swiper-slide">
 					<div class="imgcard">
 						<img height="400px"
-							src="hinh/samsung-galaxy-s20-plus-400x460-fix-400x460.png" alt="">
+							src="hinh/iphone-11-128gb-green-400x400.jpg" alt="">
 						<div class="details"></div>
 					</div>
 				</div>

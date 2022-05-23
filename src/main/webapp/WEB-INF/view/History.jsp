@@ -54,8 +54,9 @@ KhachHangBean kh = (KhachHangBean) session.getAttribute("khachhang");
 							THIỆU</a></li>
 					<li class="nav-item"><a class="nav-link" href="phone">SẢN
 							PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
-s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
+					<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+							HÀNG</a></li> s
+					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 							HỒI</a></li>
 					<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
 							NHẮN </a></li>
@@ -96,10 +97,10 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 									<tr>
 										<th>&nbsp;</th>
 										<th>&nbsp;</th>
-										<th>Tên Sách</th>
+										<th>Sản phẩm</th>
+										<th>Tên Sản Phẩm</th>
 										<th>Số Lượng</th>
 										<th>Giá</th>
-										<th>Ảnh</th>
 										<th>Thời Điểm Mua</th>
 										<th>Tình Trạng Đơn Hàng</th>
 										<th>&nbsp;</th>
@@ -113,6 +114,10 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 										<td></td>
 										<td></td>
 										<td>
+											<div class="img"
+												style="background-image: url(<%=sb.getAnh()%>);"></div>
+										</td>
+										<td>
 											<div class="email">
 												<span
 													style="font-family: serif; font-size: 20px; color: blue;"><%=sb.getTendienthoai()%></span>
@@ -121,7 +126,7 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 										<td>
 											<div class="email">
 												<span
-													style="font-family: serif; font-size: 20px; color: red;"><%=sb.getSoluong()%></span>
+													style="font-family: serif; font-size: 20px; color: red;">     <%=sb.getSoluong()%></span>
 											</div>
 										</td>
 										<td>
@@ -131,10 +136,6 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 											</div>
 										</td>
 
-										<td>
-											<div class="img"
-												style="background-image: url(<%=sb.getAnh()%>);"></div>
-										</td>
 										<td>
 											<div class="email">
 												<span
@@ -148,7 +149,7 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 											<div class="email">
 												<span
 													style="font-family: serif; font-size: 20px; color: red;">
-													<p  style="color: blueviolet"> Chờ Xử Lý</p>
+													<p style="color: blueviolet">Chờ Xử Lý</p>
 												</span>
 											</div> <%
  } else if (sb.getDamua() == 1) {
@@ -176,21 +177,19 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 		<%
 		} else {
 		%>
+		<br /> <br /> <br /> <br /> <br /> <br /> <br />
 		<h1 style="text-align: center;">Bạn cần đăng nhập để thực hiện
 			chức năng này</h1>
-		<a href="Login" style="margin-left: 550px; color: blueviolet">Đăng
-			Nhập Ngay</a>
+		<a href="Login"
+			style="margin-left: 450px; color: blueviolet; font-size: 30px">Đăng
+			Nhập Ngay</a> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+		<br /> <br /> <br />
+
 		<%
 		}
 		%>
 	</div>
-
-	<!-- ------------footer----------- -->
-<!-- 	<footer class="navbar navbar-expand-sm bg-dark" id="footer12">
-		<div class="col-md-1 ">
-			<a> <img src="hinh/python.jpg">
-			</a>
-		</div>
+	<footer class="navbar navbar-expand-sm bg-dark" id="footer">
 		<div class="col-md-2">
 			<a href="#">Chính sách bảo hành</a> <br>
 		</div>
@@ -206,6 +205,7 @@ s					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 				src="hinh/tw.png"> </a> <a href=""><img src="hinh/y.png">
 			</a>
 		</div>
-	</footer> -->
+	</footer>
+
 </body>
 </html>

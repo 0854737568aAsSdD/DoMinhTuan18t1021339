@@ -21,6 +21,7 @@ public class LichSuController {
 			KhachHangBean kh = (KhachHangBean) session.getAttribute("khachhang");
 			ArrayList<LichSuBean> sbean = bo.getLichSu(kh.getMakh());
 			request.setAttribute("history", sbean);
+			request.setAttribute("soluong", sbean.size());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

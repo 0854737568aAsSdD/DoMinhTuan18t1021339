@@ -9,13 +9,19 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.dmt.bean.DienThoaiBean;
+import com.dmt.bean.LoaiBean;
+import com.dmt.bo.LoaiBo;
 import com.dmt.bo.PaginationBo;
 
 @Controller
 public class PaginationController {
+	@Autowired
+	LoaiBo lbo;
+
 	@RequestMapping("/Pagination")
 	public String voidPagination(HttpServletRequest request) {
 		PaginationBo bo = new PaginationBo();
@@ -31,6 +37,8 @@ public class PaginationController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		List<LoaiBean> loai = lbo.getAllusers();
+		request.setAttribute("loai", loai);
 		return "Product";
 	}
 }

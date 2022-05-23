@@ -144,7 +144,7 @@ footer img {
 			});
 		</script>
 	</c:if>
-		<c:if test="${not empty daphanhoi }">
+	<c:if test="${not empty daphanhoi }">
 		<script type="text/javascript">
 			$(window).on('load', function() {
 				$('#myModal456').modal('show');
@@ -178,7 +178,7 @@ footer img {
 				<c:if test="${not empty khachhang}">
 					<ul>
 						<li class="nav-item" style="color: yellow;">Hello, ${language }</li>
-						<li class="nav-item"><span><a href="Logout">Đăng
+						<li class="nav-item"><span><a href="DangXuat">Đăng
 									Xuất</a></span></li>
 					</ul>
 >
@@ -187,19 +187,16 @@ footer img {
 			</ul>
 
 		</nav>
-				<nav class="navbar bg-dark justify-content-center" id="nav2">
-			<ul class="nav ">
+		<nav class="navbar bg-dark justify-content-center" id="nav2">
+			<ul class="nav " id="reponsive">
 				<li class="nav-item"><a class="nav-link" href="Home">TRANG
 						CHỦ</a></li>
 				<li class="nav-item"><a class="nav-link" href="About">GIỚI
 						THIỆU</a></li>
 				<li class="nav-item"><a class="nav-link" href="phone">SẢN
 						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a></li>
-				<li><a href="Html/Home.html"><img
-						style="height: 80px; border-radius: 50px; margin: 0 50px;"
-						src="hinh/python.jpg"></a></li>
-
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
+						HÀNG</a></li>
 				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
 						HỒI</a></li>
 				<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
@@ -217,9 +214,9 @@ footer img {
 				</div>
 				<fieldset class="form-group">
 					<input id="emailDN" type="text"
-						class="form-control form-control-lg"  name="phanhoi"
-						placeholder="Mời bạn nhập thông tin phản hồi" required> <span id="tbEDN"
-						class="text-light"></span>
+						class="form-control form-control-lg" name="phanhoi"
+						placeholder="Mời bạn nhập thông tin phản hồi" required> <span
+						id="tbEDN" class="text-light"></span>
 				</fieldset>
 				<div class="row">
 					<div class="col-md-12 cold-lg-12 col-sm-12 col-xl-12">

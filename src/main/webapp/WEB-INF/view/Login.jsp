@@ -331,9 +331,6 @@
 				<a style="padding-left: 20px;"
 					href="${pageContext.request.contextPath}/auth/google"><img
 					src="hinh/google-512.png"></a> <br> <br>
-				<p>
-					Bạn quên mật khẩu nhấn <a href=""> <u> vào đây </u></a>
-				</p>
 			</div>
 
 		</section>

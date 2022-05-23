@@ -138,7 +138,7 @@ footer img {
 						<ul>
 							<li class="nav-item" style="color: yellow;">Hello,
 								${language }</li>
-							<li class="nav-item"><span><a href="Logout">Đăng
+							<li class="nav-item"><span><a href="DangXuat">Đăng
 										Xuất</a></span></li>
 						</ul>
 >

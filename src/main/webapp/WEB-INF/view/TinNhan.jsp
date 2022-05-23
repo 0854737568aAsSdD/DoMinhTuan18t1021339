@@ -165,7 +165,7 @@ footer img {
 				<c:if test="${not empty khachhang}">
 					<ul>
 						<li class="nav-item" style="color: yellow;">Hello, ${language }</li>
-						<li class="nav-item"><span><a href="Logout">Đăng
+						<li class="nav-item"><span><a href="DangXuat">Đăng
 									Xuất</a></span></li>
 					</ul>
 >
@@ -182,24 +182,23 @@ footer img {
 			</ul>
 		</nav>
 		<nav class="navbar bg-dark justify-content-center" id="nav2">
-			<ul class="nav ">
-				<li class="nav-item"><a class="nav-link" href="Home">TRANG
-						CHỦ</a></li>
-				<li class="nav-item"><a class="nav-link" href="Home">GIỚI
-						THIỆU</a></li>
-				<li class="nav-item"><a class="nav-link" href="phone">SẢN
-						PHẨM</a></li>
-				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ
-						HÀNG</a></li>
-				<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
-						HỒI</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">NHƯỢNG
-						QUYỀN </a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="LichSuController">THANH TOÁN</a></li>
-				<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
-			</ul>
-		</nav>
+				<ul class="nav " id="reponsive">
+					<li class="nav-item"><a class="nav-link" href="Home">TRANG
+							CHỦ</a></li>
+					<li class="nav-item"><a class="nav-link" href="About">GIỚI
+							THIỆU</a></li>
+					<li class="nav-item"><a class="nav-link" href="phone">SẢN
+							PHẨM</a></li>
+				<li class="nav-item"><a class="nav-link" href="ShowGioHang">GIỎ HÀNG</a></li>
+					<li class="nav-item"><a class="nav-link" href="PhanHoi">PHẢN
+							HỒI</a></li>
+					<li class="nav-item"><a class="nav-link" href="tinnhan">TIN
+							NHẮN </a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="LichSuController">LỊCH SỬ MUA</a></li>
+					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
+				</ul>
+			</nav>
 		<div class="card-body">
 			<div class="table-responsive">
 				<table class="table table-bordered" id="dataTable" width="100%"

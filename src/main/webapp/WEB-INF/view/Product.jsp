@@ -140,13 +140,13 @@
 	background-color: #00BFFF;
 }
 
-.myactive{
+.myactive {
 	background: silver;
 }
 </style>
 <script type="text/javascript">
-var element = document.getElementById("mynav");
-element.classList.add("active");
+	var element = document.getElementById("mynav");
+	element.classList.add("active");
 </script>
 </head>
 <body
@@ -178,7 +178,7 @@ element.classList.add("active");
 				<c:if test="${not empty khachhang}">
 					<ul>
 						<li class="nav-item" style="color: yellow;">Hello, ${language }</li>
-						<li class="nav-item"><span><a href="Logout">Đăng
+						<li class="nav-item"><span><a href="DangXuat">Đăng
 									Xuất</a></span></li>
 					</ul>
 >
@@ -215,21 +215,23 @@ element.classList.add("active");
 					<li class="nav-item"><a class="nav-link" href="Admin">ADMIN</a></li>
 				</ul>
 			</nav>
-			<section>
-				<div class="filter">
-					<div class="row" style="padding: 0px 15px;">
-						<table class="table table-bordered">
-							<tbody>
-								<tr>
-									<c:forEach items="${loai}" var="c">
-										<td id="samsung	"><a href="phone?maloai=${c.maloai}"
-											class=""><img src="${c.anhloai}" /></a></td>
-									</c:forEach>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<!--  <div class="row" id="lc">
+			<c:if test="${soluong> 0 }">
+				<section>
+					<div class="filter">
+
+						<div class="row" style="padding: 0px 15px;">
+							<table class="table table-bordered">
+								<tbody>
+									<tr>
+										<c:forEach items="${loai}" var="c">
+											<td id="samsung	"><a href="phone?maloai=${c.maloai}"
+												class=""><img src="${c.anhloai}" /></a></td>
+										</c:forEach>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--  <div class="row" id="lc">
 						<p style="padding-right: 10px;">Chọn mức giá:</p>
 						<a href="#">Dưới 2 triệu</a> <a href="#">từ 2 - 4 triệu</a> <a
 							id="4_7" href="#">từ 4 - 8 triệu</a> <a href="#">từ 8 - 15
@@ -241,85 +243,110 @@ element.classList.add("active");
 							href="#">Độc quyền</a>
 					</div>s-->
 
-					<ul class="homeproduct" id="homeproduct">
-						<c:forEach items="${phone}" var="c">
-							<li class="item"><a
-								href="ProductDetail?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}&manhinh=${c.manhinh}&camerasau=${c.camerasau}&cameratruoc=${c.cameratruoc}&hedieuhanh=${c.hedieuhanh}&cpu=${c.cpu}&ram=${c.ram}&bonhotrong=${c.bonhotrong}">
-									<img width="180" height="180" src="${c.anh}">
-									<h3>${c.tendienthoai}</h3>
-									<div class="price">
-										<strong value>${c.gia} ₫</strong> <a style="color: blueviolet"
-											href="cart?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
-											mua</a>
-									</div>
-									<div class="promo noimage">
-										<p>Tặng 2 suất mua Đồng hồ thời trang giảm 40% (kh&#244;ng
-											&#225;p dụng th&#234;m khuyến m&#227;i kh&#225;c)</p>
-									</div> <label class="installment">Trả góp 0%</label>
-							</a></li>
-						</c:forEach>
+						<ul class="homeproduct" id="homeproduct">
+							<c:forEach items="${phone}" var="c">
+								<li class="item"><a
+									href="ProductDetail?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}&manhinh=${c.manhinh}&camerasau=${c.camerasau}&cameratruoc=${c.cameratruoc}&hedieuhanh=${c.hedieuhanh}&cpu=${c.cpu}&ram=${c.ram}&bonhotrong=${c.bonhotrong}">
+										<img width="180" height="180" src="${c.anh}">
+										<h3>${c.tendienthoai}</h3>
+										<div class="price">
+											<strong value>${c.gia} ₫</strong> <a
+												style="color: blueviolet"
+												href="cart?makh=${khachhang.getMakh()}&tendienthoai=${c.tendienthoai}&gia=${c.gia}&anh=${c.anh}&madienthoai=${c.madienthoai}">Đặt
+												mua</a>
+										</div>
+										<div class="promo noimage">
+											<p>Tặng 2 suất mua Đồng hồ thời trang giảm 40%
+												(kh&#244;ng &#225;p dụng th&#234;m khuyến m&#227;i
+												kh&#225;c)</p>
+										</div> <label class="installment">Trả góp 0%</label>
+								</a></li>
+							</c:forEach>
 
-					</ul>
-					<input type="checkbox" id="check"> <label class="chat-btn"
-						for="check"
-						onclick="document.getElementById('id1').style.display = 'block'">
-						<i class="fa fa-commenting-o comment"></i> <i
-						class="fa fa-close close"></i>
-					</label>
-					<div class="wrapper" id="id1">
-						<div class="header">
-							<h6>Xin chào quý khách đến với hỗ trợ trực tuyến</h6>
-						</div>
-						<div class="chat-form" id="conversation">
-							<div>
-								<a onclick="submitChoice(this)"
-									data-choice="Yêu cầu tư vấn sản phẩm của bạn sẽ được tới với nhân viên trực tuyến"
-									style="background: white-space:; color: black;" class="choice">
-									Tư vấn sản phẩm </a> <br /> <a onclick="submitChoice(this)"
-									style="background: white-space:; color: black;" class="choice"
-									data-choice="Yêu cầu hỗ trợ kĩ thuật của bạn sẽ được tới với nhân viên trực tuyến">
-									Hỗ trợ kĩ thuật </a> <br />
+						</ul>
+						<input type="checkbox" id="check"> <label class="chat-btn"
+							for="check"
+							onclick="document.getElementById('id1').style.display = 'block'">
+							<i class="fa fa-commenting-o comment"></i> <i
+							class="fa fa-close close"></i>
+						</label>
+						<div class="wrapper" id="id1">
+							<div class="header">
+								<h6>Xin chào quý khách đến với hỗ trợ trực tuyến</h6>
+							</div>
+							<div class="chat-form" id="conversation">
+								<div>
+									<a onclick="submitChoice(this)"
+										data-choice="Yêu cầu tư vấn sản phẩm của bạn sẽ được tới với nhân viên trực tuyến"
+										style="background: white-space:; color: black;" class="choice">
+										Tư vấn sản phẩm </a> <br /> <a onclick="submitChoice(this)"
+										style="background: white-space:; color: black;" class="choice"
+										data-choice="Yêu cầu hỗ trợ kĩ thuật của bạn sẽ được tới với nhân viên trực tuyến">
+										Hỗ trợ kĩ thuật </a> <br />
 
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<script type="text/javascript">
-						function submitChoice(el) {
-							let choice = document.createElement('p');
-							choice.innerHTML = el.dataset.choice;
-							choice.setAttribute('class', "choiceresult");
-							choice.setAttribute('color', "blue");
-							choice.setAttribute('background-color', "blue");
-							$('#conversation').append(choice);
-							let element = document.createElement('div');
-							element.innerHTML = '<a onclick="submitChoice(this)"\
+						<script type="text/javascript">
+							function submitChoice(el) {
+								let choice = document.createElement('p');
+								choice.innerHTML = el.dataset.choice;
+								choice.setAttribute('class', "choiceresult");
+								choice.setAttribute('color', "blue");
+								choice.setAttribute('background-color', "blue");
+								$('#conversation').append(choice);
+								let element = document.createElement('div');
+								element.innerHTML = '<a onclick="submitChoice(this)"\
                 data-choice="Yêu cầu tư vấn sản phẩm của bạn sẽ được tới với nhân viên trực tuyến"\
                 style="background: white-space:; color: black;" class="choice">\
                 Tư vấn sản phẩm </a> <br /> <a onclick="submitChoice(this)"\
                 style="background: white-space:; color: black;" class="choice"\
                 data-choice="Yêu cầu hỗ trợ kĩ thuật của bạn sẽ được tới với nhân viên trực tuyến"> Hỗ trợ kĩ\
                 thuật </a> <br />';
-							$('#conversation').append(element);
+								$('#conversation').append(element);
 
-						}
-					</script>
-			</section>
-			<div style="margin-left: 550px">
-				<nav aria-label="Page navigation example">
-					<ul class="pagination">
-						<li class="page-item"><a class="page-link"
-							href="Pagination?start=0&end=5">1</a></li>
-						<li class=""><a class="page-link"
-							href="Pagination?start=5&end=5">2</a></li>
-						<li class=""><a class="page-link"
-							href="Pagination?start=10&end=5">3</a></li>
-						<li class=""><a class="page-link"
-							href="Pagination?start=15&end=5">4</a></li>
-
-					</ul>
-				</nav>
-			</div>
+							}
+						</script>
+				</section>
+				<div style="margin-left: 550px">
+					<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item"><a class="page-link"
+								href="Pagination?start=0&end=5">1</a></li>
+							<li class=""><a class="page-link"
+								href="Pagination?start=5&end=5">2</a></li>
+							<li class=""><a class="page-link"
+								href="Pagination?start=10&end=5">3</a></li>
+							<li class=""><a class="page-link"
+								href="Pagination?start=15&end=5">4</a></li>
+						</ul>
+					</nav>
+				</div>
+			</c:if>
+			<c:if test="${soluong == 0  }">
+			<br/>
+			<br/>
+			<div class="h3" style="text-align: center;">Không tìm thấy sản phẩm nào</div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			</c:if>
 			<footer class="navbar navbar-expand-sm bg-dark" id="footer">
 				<div class="col-md-1 ">
 					<a> <img src="hinh/python.jpg">

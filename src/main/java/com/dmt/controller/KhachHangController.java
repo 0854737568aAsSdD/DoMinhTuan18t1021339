@@ -25,12 +25,13 @@ public class KhachHangController {
 		return "Login";
 	}
 
-	@RequestMapping("/Logout")
+	@RequestMapping("/DangXuat")
 	public String LogoutPage(HttpServletRequest request, HttpSession session) {
 		if (session.getAttribute("khachhang") != null) {
 			session.removeAttribute("khachhang");
 		}
-		return "Home";
+		System.out.println("123");
+		return "About";
 	}
 
 	@RequestMapping(value = "/KiemTra", method = RequestMethod.POST)
@@ -52,6 +53,9 @@ public class KhachHangController {
 					valid = VerifyUtils.verify(gRecaptchaResponse);
 					if (valid == true) {
 						session.setAttribute("khachhang", kh);
+						if (session.getAttribute("giohang") != null) {
+							session.removeAttribute("giohang");
+						}
 					} else {
 						request.setAttribute("SaiCapcha", "1");
 					}
