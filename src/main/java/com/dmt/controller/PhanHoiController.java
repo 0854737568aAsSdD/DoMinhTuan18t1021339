@@ -1,8 +1,10 @@
 package com.dmt.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -23,8 +25,10 @@ public class PhanHoiController {
 	}
 
 	@RequestMapping(value = "/PhanHoi", method = RequestMethod.POST)
-	public String voidshow123(HttpServletRequest request, HttpSession se) {
+	public String voidshow123(HttpServletRequest request, HttpSession se, HttpServletResponse response) {
 		try {
+			request.setCharacterEncoding("utf-8");
+			response.setCharacterEncoding("utf-8");
 			String phanhoi = request.getParameter("phanhoi");
 			System.out.println(phanhoi);
 			KhachHangBean kh = (KhachHangBean) se.getAttribute("khachhang");
@@ -55,10 +59,19 @@ public class PhanHoiController {
 	}
 
 	@RequestMapping(value = "/AdminPhanHoi", method = RequestMethod.GET)
-	public String phanhoi(HttpServletRequest request) {
+	public String phanhoi(HttpServletRequest request, HttpSession se, HttpServletResponse response) {
+		try {
+			request.setCharacterEncoding("utf-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		response.setCharacterEncoding("utf-8");
 		String maphanhoi = request.getParameter("maphanhoi");
 		String tenkhachhang = request.getParameter("tenkhachhang");
 		String noidung = request.getParameter("noidung");
+		System.out.println(tenkhachhang);
+		System.out.println(noidung);
 		request.setAttribute("maphanhoi", maphanhoi);
 		request.setAttribute("tenkhachhang", tenkhachhang);
 		request.setAttribute("noidung", noidung);
@@ -66,7 +79,10 @@ public class PhanHoiController {
 	}
 
 	@RequestMapping(value = "/AdminPhanHoi", method = RequestMethod.POST)
-	public String phanhoi123(HttpServletRequest request) {
+	public String phanhoi123(HttpServletRequest request, HttpSession se, HttpServletResponse response)
+			throws UnsupportedEncodingException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		AdminPhanHoiBo bo = new AdminPhanHoiBo();
 		PhanHoiBo phbo = new PhanHoiBo();
 		try {

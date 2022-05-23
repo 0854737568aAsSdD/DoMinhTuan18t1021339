@@ -32,10 +32,14 @@
 </head>
 
 <body id="page-top">
+	<%
+	request.setCharacterEncoding("utf-8");
+	response.setCharacterEncoding("utf-8");
+	%>
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-		<a class="navbar-brand mr-1" href="AdminController">Quản Lý Thống
+		<a class="navbar-brand mr-1" href="QuanLyPhone">Quản Lý Thống
 			Kê</a>
 
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"

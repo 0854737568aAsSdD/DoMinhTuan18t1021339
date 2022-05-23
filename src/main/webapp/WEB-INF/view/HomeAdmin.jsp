@@ -49,8 +49,7 @@
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-		<a class="navbar-brand mr-1" href="AdminController">Quản Lý Điện
-			Thoại</a>
+		<a class="navbar-brand mr-1" href="QuanLyPhone">Quản Lý Điện Thoại</a>
 
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"
 			id="sidebarToggle" href="#">
@@ -59,7 +58,7 @@
 
 		<!-- Navbar Search -->
 		<form action="QuanLyPhone" method="get"
-				class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+			class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<div class="input-group">
 				<input type="text" class="form-control"
 					placeholder="Search for phone" aria-label="Search"

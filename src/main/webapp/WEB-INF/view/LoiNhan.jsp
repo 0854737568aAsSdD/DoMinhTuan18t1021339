@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Address</title>
+<title>Message</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -35,7 +35,10 @@
 </style>
 </head>
 <body>
-
+	<%
+	request.setCharacterEncoding("utf-8");
+	response.setCharacterEncoding("utf-8");
+	%>
 	<nav class="navbar bg-dark justify-content-center" id="nav2">
 		<ul class="nav " id="reponsive">
 			<li class="nav-item"><a class="nav-link" href="HomeAdmin">Admin</a></li>
@@ -53,8 +56,8 @@
  --%>
 	<div class="container">
 		<h3 style="text-align: center;">Nhập lời nhắn cho khách hàng</h3>
-		<h4 style="text-align: center;" >Tên khách hàng là :
-			${tenkhachhang}</h4>
+		<h4 style="text-align: center;">Tên khách hàng là :
+			<%= request.getAttribute("tenkhachhang") %></h4>
 		<h4 style="text-align: center;">Nội dung cần trả lời là :
 			${noidung}</h4>
 		<form action="AdminPhanHoi" method="post" id="form-new">
@@ -110,5 +113,6 @@
 		//}
 		});
 	</script>
+	
 </body>
 </html>

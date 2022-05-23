@@ -33,7 +33,7 @@
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-		<a class="navbar-brand mr-1" href="Admin">Quản Lý Điện Thoại</a>
+		<a class="navbar-brand mr-1" href="QuanLyPhone">Quản Lý Phản Hồi</a>
 
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"
 			id="sidebarToggle" href="#">
